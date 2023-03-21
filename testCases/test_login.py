@@ -3,8 +3,9 @@ import time
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
 
+
 class Test_001_login:
-    #terminal test run
+    # terminal test run
     # pytest -v -s testCases/test_login.py
     # pytest -v -s testCases/test_login.py --browser chrome
     # pytest -v -s -n=2 testCases/test_login.py --browser chrome
@@ -14,12 +15,12 @@ class Test_001_login:
     username = ReadConfig.getUseremail()
     password = ReadConfig.getPassword()
 
-    def test_homePageTitle(self,setup):
+    def test_homePageTitle(self, setup):
 
-        self.driver=setup
+        self.driver = setup
 
         self.driver.get(self.baseURL)
-        act_title=self.driver.title
+        act_title = self.driver.title
 
         if act_title == "Your store. Login":
 
@@ -31,13 +32,12 @@ class Test_001_login:
             self.driver.close()
             assert False
 
-
-    def test_login(self,setup):
+    def test_login(self, setup):
 
         self.driver = setup
         self.driver.get(self.baseURL)
 
-        self.lp=LoginPage(self.driver)
+        self.lp = LoginPage(self.driver)
         self.lp.setUserName(self.username)
         self.lp.setPassword(self.password)
         self.lp.clickLogin()
@@ -55,16 +55,3 @@ class Test_001_login:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_login_page_title.png")
             self.driver.close()
             assert False
-
-
-
-
-
-
-
-
-
-
-
-
-
