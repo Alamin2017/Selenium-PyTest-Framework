@@ -12,11 +12,13 @@ def setup(browser):
         print("Launching Chrome Browser")
         return driver
     elif browser == 'firefox':
-        driver = webdriver.Firefox(executable_path='D:\Soft\Python_Selenium\Firefox\geckodriver.exe')
+        s = Service("E:\Soft\Python_PyCharm\geckodriver.exe")
+        driver = webdriver.Firefox(service=s)
         print("Launching Firefox Browser")
         return driver
     else:
-        driver = webdriver.Edge(executable_path='D:\Soft\Python_Selenium\Edge\msedgedriver.exe')
+        s = Service("E:\Soft\Python_PyCharm\msedgedriver.exe")
+        driver = webdriver.Edge(service=s)
         return driver
 
 

@@ -19,3 +19,8 @@ class ReadConfig:
     def getPassword():
         password = config.get('common info', 'password')
         return password
+
+    @staticmethod
+    def getApplicationURL2():
+        url2 = config.get('common info','baseURL2')
+        return url2
