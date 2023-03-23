@@ -7,7 +7,7 @@ from utilities import XLUtils
 class Test_002_DDT_login:
     # terminal test run
     # pytest -v -s testCases/test_login_ddt.py --browser chrome
-    # pytest -v -s -n=2 --html=Reports/report.html testCases/test_login.py --browser chrome
+    # pytest -v -s -n=2 --html=reports/report.html testCases/test_login.py --browser chrome
     baseURL = ReadConfig.getApplicationURL()
     path = ".//TestData/LoginData.xlsx"
 
