@@ -1,3 +1,4 @@
+
 import time
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
@@ -40,6 +41,7 @@ class Test_001_login:
         self.lp.setUserName(self.username)
         self.lp.setPassword(self.password)
         self.lp.clickLogin()
+
         act_title1 = self.driver.title
 
         if act_title1 == "Dashboard / nopCommerce administration":

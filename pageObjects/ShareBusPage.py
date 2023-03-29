@@ -10,7 +10,7 @@ class ShareBusPage:
         self.driver.find_element(By.XPATH, "//input[@id='email']").send_keys(username)
     def enterPass(self, password):
         self.driver.find_element(By.XPATH, "//input[@id='password']").send_keys(password)
-
     def clickLoginInButton(self):
         self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+        
 

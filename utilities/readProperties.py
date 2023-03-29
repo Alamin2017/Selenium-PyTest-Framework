@@ -22,5 +22,10 @@ class ReadConfig:
 
     @staticmethod
     def getApplicationURL2():
-        url2 = config.get('common info','baseURL2')
+        url2 = config.get('common info', 'baseURL2')
         return url2
+
+    @staticmethod
+    def getApplicationURLBkash():
+        urlbkash = config.get('common info', 'basebkashURL')
+        return urlbkash
