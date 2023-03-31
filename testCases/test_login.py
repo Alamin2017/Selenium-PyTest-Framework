@@ -1,4 +1,3 @@
-
 import time
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
@@ -56,7 +55,4 @@ class Test_001_login:
         else:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_login_page_title.png")
             self.driver.close()
-
             assert False
-
-

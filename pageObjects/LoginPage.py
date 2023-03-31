@@ -22,4 +22,3 @@ class LoginPage:
 
     def clickLogout(self):
         self.driver.find_element(By.XPATH, "//a[normalize-space()='Logout']").click()
-

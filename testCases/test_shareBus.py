@@ -4,8 +4,10 @@ import time
 
 
 class Test_ShareBus:
-
     baseURL = ReadConfig.getApplicationURL2()
+    #pytest -v -s testCases/test_bkash.py --browser chrome --html=my_report.html
+
+
     def test_just(self, setup):
         self.driver = setup
         self.driver.maximize_window()
@@ -18,6 +20,3 @@ class Test_ShareBus:
         time.sleep(3)
         self.lp.clickLoginInButton()
         time.sleep(8)
-
-
-

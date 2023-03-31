@@ -8,6 +8,7 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+import allure
 
 
 @pytest.fixture()
@@ -50,3 +51,5 @@ def pytest_addoption(parser):
 @pytest.fixture()
 def browser(request):
     return request.config.getoption("--browser")
+
+
