@@ -43,3 +43,5 @@ class Test_Bkash:
         time.sleep(3)
         title2 = self.lp.get_title__2()
         print(title2)
+        assert title2 == TestData.LOGIN_PAGE_TITLE
+        self.driver.close()

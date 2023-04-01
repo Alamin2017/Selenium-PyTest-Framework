@@ -20,3 +20,4 @@ class Test_ShareBus:
         time.sleep(3)
         self.lp.clickLoginInButton()
         time.sleep(8)
+        self.driver.close()

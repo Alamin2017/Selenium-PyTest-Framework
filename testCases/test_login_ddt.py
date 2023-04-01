@@ -39,3 +39,4 @@ class Test_002_DDT_login:
                 if self.exp == "Pass":
                     self.lp.clickLogout()
                     time.sleep(5)
+                    self.driver.close()
